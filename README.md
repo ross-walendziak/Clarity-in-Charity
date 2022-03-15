@@ -1,5 +1,5 @@
 # Clarity-in-Charity
-Using big data econometrics to optimize a direct marketing add campaign
+Using big data econometrics to optimize a direct marketing advertising campaign
 
 # Donation Estimator | Project Overview
 * Created various classification and regression models for a theoretical charity to optimize profits from a direct marketing campaign.
