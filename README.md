@@ -53,12 +53,12 @@ https://github.com/ross-walendziak/Clarity-in-Charity/blob/main/charity.csv
 # Data Transformation:
 
 * Subsetting the data:
- * Training Set: 3,984 Obs
- * Validation Set: 2,018 Obs
- * Test Set: 2,007 Obs
+  * Training Set: 3,984 Obs
+  * Validation Set: 2,018 Obs
+  * Test Set: 2,007 Obs
 
 * Some explanatory variables exhibited a positive right skew.  The log of these variables was taken to approximate a more normal distribution.
- * avhv, incm, inca, tgif, and agif
+  * avhv, incm, inca, tgif, and agif
 
 * A new continuous variable for financial wellness is created (finWellness), calculated as the most recent gift amount (rgif) divided by the largest gift amount (lgif) if lgif is not       zero, zero otherwise.  Larger ratios should indicate recent upward financial mobility and increased ability to donate whereas lower ratios should indicate recent financial       hardship and less ability to donate.
 * A new dummy variable (chldLess1) that returns true if the number of childeren in a household is one or less, zero otherwise.
