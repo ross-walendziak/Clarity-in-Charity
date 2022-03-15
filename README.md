@@ -2,10 +2,10 @@
 Using big data econometrics to optimize a direct marketing campaign
 
 # Donation Estimator | Project Overview
-* Created various classification and regression models for a theoretical charity to optimize profits from a direct mail marketing campaign.
+* Created various classification and regression models for a theoretical charity to optimize profits from a direct marketing campaign.
 * Each individual mailing costs the charity $2.
 * On average, Without application of any predicitive models, the response rate for the mailing campaign is 10% and each mailing sent to a potential donor is expected to cost the charity $0.55. Thus, sending mailings out to donors using a simple random technique is a negative net present value proposition for the charity.
-* Our best classification model is the boost model and the best regression model is the random forest model.  Expected profit outcomes change from -$0.55 per mailing without the models to +$0.09 per mailing with the models. The charity can become self-sustaining.
+* Our best classification model is the boost model and the best regression model is the random forest model.  Expected profit outcomes change from -$0.55 per mailing without use of the models to +$0.09 per mailing with use of the models. The charity can become self-sustaining.
 
 # Code and Resources Used:
 * R Version: 4.1.2
