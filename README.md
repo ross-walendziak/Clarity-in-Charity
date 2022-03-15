@@ -101,4 +101,4 @@ https://github.com/ross-walendziak/Clarity-in-Charity/blob/main/charity.csv
 * The classification model predicts a response rate of 14.45%; 44.5% higher than the expected response rate before the model was implemented (10%).
 * The regression model predicts an average donation of $14.22 across the test data set for those selected for mailing.
 * If we restrict the mailing to only classification outcomes of expected donors, the average donation increases to $14.45. 
- * This yields the expected profits of $14.45*0.1445 - 2 = $0.09 per mailing !
+ * This yields an expected profit of $14.45*0.1445 - 2 = $0.09 per mailing !
