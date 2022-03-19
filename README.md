@@ -3,13 +3,14 @@ Using big data econometrics to optimize a direct marketing advertising campaign
 
 # Donation Estimator | Project Overview
 * Created various classification and regression models for a theoretical charity to optimize profits from a direct marketing campaign.
-* Each individual mailing costs the charity $2.
-* On average, Without application of any predicitive models, the response rate for the mailing campaign is 10% and each mailing sent to a potential donor is expected to cost the charity $0.55. Thus, sending mailings out to donors using a simple random sample technique is a negative net present value proposition for the charity.
-* Our best classification model is the boost model and the best regression model is the random forest model.  Expected profit outcomes change from -$0.55 per mailing without use of the models to +$0.09 per mailing with use of the models. The charity can become self-sustaining.
+* Each individual mailing to a potential donor costs the charity $2.
+* On average, without application of any predicitive models, the response rate for the mailing campaign is 10% and each mailing sent to a potential donor is expected     to cost the charity $0.55. Thus, sending mailings out to donors using a simple random sample approach is a negative net present value proposition for the charity.
+* Our best classification model is the boost model and the best regression model is the random forest model.  
+  * Expected profit outcomes change from -$0.55 per mailing without use of the models to +$0.09 per mailing with use of the models. The charity can become self-           sustaining.
 
 # Code and Resources Used:
 * R Version: 4.1.2
-* Packages: tidyr, ggplot2, psych, caret, Hmisc, xlsx, writexl, car, mlogit, MASS, pscl, AER, boot, purrr, pastecs, gam, e1071, tree, rpart, randomForest, gbm, leaps, glmnet, pls
+* Packages: tidyr, ggplot2, psych, caret, hmisc, xlsx, writexl, car, mlogit, MASS, pscl, AER, boot, purrr, pastecs, gam, e1071, tree, rpart, randomForest, gbm, leaps, glmnet, pls
 * Text: [An Introduction to Statistical Learning](https://static1.squarespace.com/static/5ff2adbe3fe4fe33db902812/t/6062a083acbfe82c7195b27d/1617076404560/ISLR%2BSeventh%2BPrinting.pdf)
 
 # Data Source:
@@ -43,10 +44,10 @@ https://github.com/ross-walendziak/Clarity-in-Charity/blob/main/charity.csv
 
 # Exploratory Data Analysis:
 
-* The donor predictor variables for children (CHLD) and wealth rating (WRAT) have promising correlations with the donor classification response (DONR) and the donation amount (DAMT) respont variables.
+* The donor predictor variables for children (CHLD) and wealth rating (WRAT) have promising correlations with the donor classification response (DONR) and the donation   amount (DAMT) respont variables.
 ![](https://github.com/ross-walendziak/Clarity-in-Charity/blob/main/Graphics/Corr%20-%20Donor%20Predictors.png)
 
-* The negative correlation between DAMT and CHILD as well as the possitive correlations between household income (HINC), wealth rating (WRAT) and DAMT are shown visually below.
+* The negative correlation between DAMT and CHILD as well as the positive correlations between household income (HINC), wealth rating (WRAT) and DAMT are shown           visually below.
 
 ![](https://github.com/ross-walendziak/Clarity-in-Charity/blob/main/Graphics/Damt%20vs%20Chld%20hinc%20and%20wrat.png)
 
@@ -60,7 +61,7 @@ https://github.com/ross-walendziak/Clarity-in-Charity/blob/main/charity.csv
 * Some explanatory variables exhibited a positive right skew.  The log of these variables was taken to approximate a more normal distribution.
   * avhv, incm, inca, tgif, and agif
 
-* A new continuous variable for financial wellness is created (finWellness), calculated as the most recent gift amount (rgif) divided by the largest gift amount (lgif) if lgif is not       zero, zero otherwise.  Larger ratios should indicate recent upward financial mobility and increased ability to donate whereas lower ratios should indicate recent financial       hardship and less ability to donate.
+* A new continuous variable for financial wellness is created (finWellness), calculated as the most recent gift amount (rgif) divided by the largest gift amount (lgif)   if lgif is not zero, zero otherwise.  Larger ratios should indicate recent upward financial mobility and increased ability to donate whereas lower ratios should       indicate recent financial hardship and less ability to donate.
 * A new dummy variable (chldLess1) that returns true if the number of childeren in a household is one or less, zero otherwise.
 * A new dummy variable (wealthGr6) that returns true if the wealth rating (WRAT) is six or above and returns false for WRAT categories less than six.
 
@@ -70,7 +71,7 @@ https://github.com/ross-walendziak/Clarity-in-Charity/blob/main/charity.csv
 
 ![](https://github.com/ross-walendziak/Clarity-in-Charity/blob/main/Graphics/Classification%20Model%20Results.png)
 
-* Confusion Matrix for the Boost classificaton model:
+* Confusion Matrix for the Boost classificaton model on the validation set:
 
 ![](https://github.com/ross-walendziak/Clarity-in-Charity/blob/main/Graphics/Classification%20Confusion%20Matrix.png)
 
@@ -91,7 +92,7 @@ https://github.com/ross-walendziak/Clarity-in-Charity/blob/main/charity.csv
 
 ![](https://github.com/ross-walendziak/Clarity-in-Charity/blob/main/Graphics/Random%20Forest%20Variable%20Importance.png)
 
-* Coefficent estimates for the Lasso model are shown below, ranked in decending absoulte value order.
+* Coefficent estimates from the Lasso model are shown below, ranked in decending absoulte value order.
 
 ![](https://github.com/ross-walendziak/Clarity-in-Charity/blob/main/Graphics/Lasso%20Regression%20Coefficient%20Estimates.png)
 
