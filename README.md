@@ -44,7 +44,7 @@ https://github.com/ross-walendziak/Clarity-in-Charity/blob/main/charity.csv
 
 # Exploratory Data Analysis:
 
-* The donor predictor variables for children (CHLD) and wealth rating (WRAT) have promising correlations with the donor classification response (DONR) and the donation   amount (DAMT) respont variables.
+* The donor predictor variables for children (CHLD) and wealth rating (WRAT) have promising correlations with the donor classification response (DONR) and the donation   amount (DAMT) response variables.
 ![](https://github.com/ross-walendziak/Clarity-in-Charity/blob/main/Graphics/Corr%20-%20Donor%20Predictors.png)
 
 * The negative correlation between DAMT and CHILD as well as the positive correlations between household income (HINC), wealth rating (WRAT) and DAMT are shown           visually below.
